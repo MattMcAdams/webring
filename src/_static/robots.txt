@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /admin
+Disallow: /cms
+Disallow: /images/
+Disallow: /cdn/
+Noindex: /admin
+Noindex: /cms
+Noindex: /images/
+Noindex: /cdn/

@@ -1,0 +1,115 @@
+:root {
+  --page-bg: #f8fafc;
+  --surface-bg: #f1f5f9;
+  --link: #3b82f6;
+  --link-hover: #2563eb;
+  --link-visited: #8b5cf6;
+  --text: #1e293b;
+  --text-subtle: #475569;
+  --heading: #0f172a;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+ol, ul {
+  padding-left: 1.5rem;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: 'Recursive', sans-serif;
+  line-height: 1.5;
+  color: var(--text);
+  background: var(--page-bg);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--heading);
+}
+
+body {
+  position: relative;
+  font-size: 1.25rem;
+  min-height: 100vh;
+}
+
+a {
+  color: var(--link);
+}
+
+a:visited {
+  color: var(--link-visited);
+}
+
+a:hover,
+a:focus {
+  color: var(--link-hover);
+}
+
+.buttons {
+  list-style: none;
+}
+
+.buttons a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  padding: 1em 1em;
+  margin: 1rem 0;
+  border-radius: 10px;
+  background: var(--link);
+  color: white;
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 0.25em;
+
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.buttons a .fa-solid,
+.buttons a .fa-brands {
+  width: 2rem;
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+
+
+.buttons a:hover,
+.buttons a:focus {
+  background: var(--link-hover);
+}
+
+.subtle {
+  color: var(--text-subtle);
+}
+
+main {
+  padding: 1rem;
+  max-width: 50rem;
+  margin: auto;
+}
+
+.site-list {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+ol.site-list {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+}
+
+h1 {
+  letter-spacing: -0.03em;
+}

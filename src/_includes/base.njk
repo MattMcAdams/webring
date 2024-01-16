@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- METADADA -->
+    {% if title %}
+      <title>{{title}} | {{metadata.title}}</title>
+    {%else%}
+      <title>{{metadata.title}}</title>
+    {%endif%}
+    <meta name="description" content="{{ description or metadata.description }}">
+    <meta name="og:title" content="{{ title or metadata.title }}">
+    <meta name="og:description" content="{{ description or metadata.description }}">
+    {# <meta name="og:image" content="{{ thumbnail or metadata.thumbnail }}"> #}
+    {# <meta name="twitter:card" content="summary_large_image"> #}
+    <meta name="twitter:title" content="{{ title or metadata.title }}">
+    <meta name="twitter:description" content="{{ description or metadata.description }}">
+    {# <meta name="twitter:image" content="{{ thumbnail or metadata.thumbnail }}"> #}
+
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="{{ '/assets/index.css' | url }}">
+  </head>
+  <body>
+    <div id="app" class="page">
+
+      {{ content | safe }}
+
+    </div>
+  </body>
+</html>

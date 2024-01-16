@@ -1,0 +1,13 @@
+---
+eleventyExcludeFromCollections: true
+permalink: 'sites.json'
+---
+
+[
+  {% for site in sites %}
+    {
+      "title":"{{site.title}}",
+      "url":"{{site.url}}"
+    }{% unless forloop.last%},{% endunless %}
+  {% endfor %}
+]
